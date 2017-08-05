@@ -1,2 +1,4 @@
 # umd-library-starter
-Write a UMD format library base on webpack3.
+Support es6 module, postcss.
+
+Write you code, export umd format library.
