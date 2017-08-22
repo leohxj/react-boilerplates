@@ -1,5 +1,5 @@
-import './index.pcss';
+import component from './component';
 
-export default function () {
-  console.log('this is default export');
-}
+// import './index.pcss';
+
+document.body.appendChild(component());
