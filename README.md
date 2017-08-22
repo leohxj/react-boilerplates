@@ -11,17 +11,22 @@ Write you code, export umd format library.
 ## webpack
 - webpack: 核心功能
 - webpack-dev-server: dev 环境下使用，实现自动更新, 静态服务器等功能
+- friendly-errors-webpack-plugin: 在开发环境下，提供更好的编译体验
 
 ### babel
 - babel-core: babel 核心功能
 - babel-loader: 处理 ES6 代码，推荐安装 `yarn add babel-loader babel-core babel-preset-env webpack --dev`
 - babel-preset-env: babel 的 preset
+- babel-preset-stage-2: 接近稳定的标准 preset
+- babel-plugin-transform-runtime: runtime 期间的 polyfill
+
 
 ### eslint
 - eslint: eslint 核心功能
 - eslint-loader: webpack loader 处理代码是否符合 eslint 规范
 - eslint-config-airbnb-base: airbnb 最佳实践，但是有些 rules 不是很人性化，可以自行关闭
 - eslint-plugin-import: airbnb-base 依赖的 eslint plugin
+- eslint-friendly-formatter: 精准定位出错附近的代码，显示出来
 
 ### css
 - postcss-loader: 处理 css 代码
@@ -32,3 +37,7 @@ Write you code, export umd format library.
 
 ### html
 - html-webpack-plugin: 生成 html 文件，注入相关 webpack 生成的脚本
+
+
+# config
+webpack 配置文件，建议进行拆分，便于管理和复用。

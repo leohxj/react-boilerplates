@@ -1,6 +1,12 @@
+/**
+ * This file used by node.js
+ * So, using CommonJS to write code
+ */
 const path = require('path');
+const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -17,9 +23,11 @@ const commonConfig = {
     libraryTarget: 'umd'
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
+    new HtmlWebpackPlugin({
+      title: 'Webpack demo',
+    }),
   ],
-
 };
 
 const developmentConfig = {
@@ -40,7 +48,28 @@ const developmentConfig = {
     // unlike default `localhost`.
     host: process.env.HOST, // Defaults to `localhost`
     port: process.env.PORT, // Defaults to 8080
-  }
+    // overlay: true is equivalent
+    overlay: {
+      errors: true,
+      warnings: true,
+    },
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+
+        loader: 'eslint-loader',
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        },
+      },
+    ],
+  },
+  plugins: [
+    new FriendlyErrorsWebpackPlugin(),
+  ]
 };
 
 const productionConfig = {
@@ -76,12 +105,11 @@ const productionConfig = {
   },
 };
 
-const getConfigs = config => Object.assign({}, commonConfig, config);
+const getConfigs = config => merge(commonConfig, config);
 
 module.exports = (env) => {
   if (env === 'production') {
     return getConfigs(productionConfig);
   }
-  console.log('dev:', getConfigs(developmentConfig));
   return getConfigs(developmentConfig);
 };

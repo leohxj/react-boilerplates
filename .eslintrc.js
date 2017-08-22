@@ -2,7 +2,12 @@ module.exports = {
   "extends": "airbnb-base",
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true,
+    "commonjs": true,
+  },
+  parserOptions: {
+    sourceType: 'module',
   },
   "plugins": [
     "import"
