@@ -1,14 +1,17 @@
 {
   "name": "umd-library-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A bootstrap for webpack3 project",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --env development",
     "build": "webpack --display-modules --env production",
     "lint:js": "eslint app"
   },
-  "keywords": [],
+  "keywords": [
+    "bootstrap",
+    "webpack3"
+  ],
   "author": "Leo Hui <leohxj@gmail.com>",
   "license": "ISC",
   "dependencies": {},
