@@ -10,7 +10,7 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 // 拼接目录路径
 function resolve(dir) {
-  return path.join(__dirname, dir);
+  return path.join(__dirname, '..', dir);
 }
 
 const commonConfig = {
@@ -78,16 +78,16 @@ const productionConfig = {
     rules: [{
       enforce: 'pre',
       test: /\.js$/,
-      exclude: path.resolve(__dirname, 'node_modules'),
+      exclude: resolve('node_modules'),
       loader: 'eslint-loader',
     },
     {
       test: /\.js$/,
-      exclude: path.resolve(__dirname, 'node_modules'),
+      exclude: resolve('node_modules'),
       loader: 'babel-loader'
     }, {
       test: /\.pcss$/,
-      exclude: path.resolve(__dirname, 'node_modules'),
+      exclude: resolve('node_modules'),
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [{

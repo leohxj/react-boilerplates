@@ -21,6 +21,8 @@ Write you code, export umd format library.
 - babel-preset-env: babel 的 preset
 - babel-preset-stage-2: 接近稳定的标准 preset
 - babel-plugin-transform-runtime: runtime 期间的 polyfill
+- babel-runtime: build 时候使用的
+- babel-polyfill: 转换 ES6 的API, 配合 babel-preset-env 设置 `useBuildIn: true` 可减少打包体积，安装在 dependencies 中
 
 
 ## eslint
