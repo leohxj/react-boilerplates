@@ -80,26 +80,35 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_pcss__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_pcss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__index_pcss__);
 
 
-// import './index.pcss';
+
 
 document.body.appendChild(Object(__WEBPACK_IMPORTED_MODULE_0__component__["a" /* default */])());
+Object.assign({}, { a: 1 });
+
 
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function () {
-  var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Hello World';
-
-  var element = document.createElement('div');
+/* harmony default export */ __webpack_exports__["a"] = ((text = 'Hello World') => {
+  const element = document.createElement('div');
 
   element.innerHTML = text;
 
   return element;
 });
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

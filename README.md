@@ -35,7 +35,7 @@ Write you code, export umd format library.
 ## css
 - postcss-loader: 处理 css 代码
 - postcss-cssnext: postcss 的 preset 吧
-- css-loader: 支持引用CSS文件(import 方式), 只负责读取 css 文件内容（当作字符处理)
+- css-loader: 支持引用CSS文件(import 方式), 只负责读取 css 文件内容（当作字符处理), 可设置 `modules: true` 支持 css modules
 - style-loader: 将解析的 css 内容，通过 style 标签插入页面 head 中, 所以一般 style-loader 作为最后处理
 - extract-text-webpack-plugin: 负责将 css 输出成文件
 

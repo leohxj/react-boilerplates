@@ -24,7 +24,6 @@ const commonConfig = {
     libraryTarget: 'umd'
   },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
       title: 'Webpack demo',
     }),
@@ -56,17 +55,23 @@ const developmentConfig = {
     },
   },
   module: {
-    rules: [
+    rules: [{
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: resolve('node_modules'),
+        loader: 'eslint-loader',
+      },
       {
         test: /\.js$/,
-        enforce: 'pre',
-
-        loader: 'eslint-loader',
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        },
+        exclude: resolve('node_modules'),
+        loader: 'babel-loader'
       },
-    ],
+      {
+        test: /\.pcss$/,
+        exclude: resolve('node_modules'),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      }
+    ]
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
@@ -75,35 +80,30 @@ const developmentConfig = {
 
 const productionConfig = {
   module: {
-    rules: [{
-      enforce: 'pre',
-      test: /\.js$/,
-      exclude: resolve('node_modules'),
-      loader: 'eslint-loader',
-    },
-    {
-      test: /\.js$/,
-      exclude: resolve('node_modules'),
-      loader: 'babel-loader'
-    }, {
+    rules: [ {
       test: /\.pcss$/,
       exclude: resolve('node_modules'),
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [{
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1,
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: 'postcss-loader'
           }
-        },
-        {
-          loader: 'postcss-loader'
-        }
         ]
       })
-    }
-    ]
+    }]
   },
+  plugins: [
+    new ExtractTextPlugin('[name].css'),
+    new HtmlWebpackPlugin({
+      title: 'Webpack demo',
+    }),
+  ],
 };
 
 const getConfigs = config => merge(commonConfig, config);
