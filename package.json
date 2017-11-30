@@ -4,6 +4,7 @@
   "description": "A bootstrap for webpack3 project",
   "main": "index.js",
   "scripts": {
+    "precommit": "eslint src/**/*.js",
     "start": "webpack-dev-server --config build/webpack.config.js --env development",
     "build": "webpack --config build/webpack.config.js --display-modules --env production",
     "lint:js": "eslint app"
@@ -32,6 +33,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
