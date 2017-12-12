@@ -16,6 +16,7 @@ Write you code, export umd format library.
 - `.gitignore`: git 忽略列表
 - `.postcssrc.js`: postcss 配置文件
 - `.prettierrc`: Prettier 配置文件
+- `.stylelintrc`: styleint 配置文件, 类似 eslint 的工具
 - `.travis.yml`: TravisCI 配置文件
 - `package.json`: 项目 package.json
 - `package-lock.json`: npm5 带的版本锁定功能
@@ -57,7 +58,8 @@ Write you code, export umd format library.
 - extract-text-webpack-plugin: 负责将 css 输出成文件
 
 ### stylelint
-
+- stylelint: 校验 css 代码
+- stylelint-config-standard: 一些最佳实践的集合
 
 ## html
 - html-webpack-plugin: 生成 html 文件，注入相关 webpack 生成的脚本
@@ -72,10 +74,9 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 
 ## 三份 config
 
-
 # TBD
 - `npm run start` 使用 `webpack-dev-server` 有预览功能，但是 `npm run build` 没有，最好添加一个 `express` 处理
 - `webpack-dev-server` 可以替换为 `express` + `webpack-dev-middleware` + `webpack-hot-middleware`
 - [] 如何一个工程配置多个主题
 - [] css, html 多加入 lint, 最好配合 perttier
-- [] perttier 使用 eslint 的 config?
+- [x] prettier 自己加规则, 尽量配合 eslint, lint-staged 先 prettier 再 eslint --fix
