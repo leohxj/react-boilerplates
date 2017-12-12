@@ -13,6 +13,10 @@
       "prettier --write",
       "eslint --fix",
       "git add"
+    ],
+    "src/**/*.*.{pcss}": [
+      "stylelint --fix",
+      "git add"
     ]
   },
   "keywords": [
@@ -46,6 +50,8 @@
     "postcss-loader": "^2.0.6",
     "prettier": "1.9.2",
     "style-loader": "^0.18.2",
+    "stylelint": "^8.3.1",
+    "stylelint-config-standard": "^18.0.0",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.7.1",
     "webpack-merge": "^4.1.0"
