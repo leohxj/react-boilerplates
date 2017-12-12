@@ -54,6 +54,7 @@ const developmentConfig = {
       warnings: true,
     },
   },
+  devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [{
         enforce: 'pre',
@@ -69,7 +70,16 @@ const developmentConfig = {
       {
         test: /\.pcss$/,
         exclude: resolve('node_modules'),
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          'style-loader',
+          { loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          { loader: 'postcss-loader', options: { sourceMap: true } }
+        ]
       }
     ]
   },

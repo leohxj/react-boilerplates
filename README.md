@@ -12,7 +12,7 @@ Write you code, export umd format library.
 - `.browserslistrc`: Browserslist 配置文件
 - `.editorconfig`: editorconfig 配置文件
 - `eslintignore`: eslint 忽略列表
-- `eslintrc.js`: eslint 配置文件
+- `eslintrc.js`: eslint 配置文件, eslint 推荐使用 .js 文件维护配置, 可能是好维护注释吧.
 - `.gitignore`: git 忽略列表
 - `.postcssrc.js`: postcss 配置文件
 - `.prettierrc`: Prettier 配置文件
