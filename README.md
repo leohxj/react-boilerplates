@@ -8,7 +8,7 @@ Write you code, export umd format library.
 # DevDependencies
 
 ## base
-- cross-env: TBD, 区分环境，目前直接使用 webpack 命令后加参数  `--env` 参数。遇到兼容问题再替换吧。
+- cross-env: TODO: 区分环境，目前直接使用 webpack 命令后加参数  `--env` 参数。遇到兼容问题再替换吧。
 
 ## webpack
 - webpack: 核心功能
@@ -31,6 +31,7 @@ Write you code, export umd format library.
 - eslint-config-airbnb-base: airbnb 最佳实践，但是有些 rules 不是很人性化，可以自行关闭
 - eslint-plugin-import: airbnb-base 依赖的 eslint plugin
 - eslint-friendly-formatter: 精准定位出错附近的代码，显示出来
+- eslint-plugin-prettier: 配合 prettier 格式化
 
 ## css
 - postcss-loader: 处理 css 代码
@@ -39,14 +40,26 @@ Write you code, export umd format library.
 - style-loader: 将解析的 css 内容，通过 style 标签插入页面 head 中, 所以一般 style-loader 作为最后处理
 - extract-text-webpack-plugin: 负责将 css 输出成文件
 
+### stylelint
+
+
 ## html
 - html-webpack-plugin: 生成 html 文件，注入相关 webpack 生成的脚本
 
+## format
+- husky: git hook
+- lint-staged: 检测 staged 的变化
+- prettier: 格式化 JS, CSS 代码
 
 # config
 webpack 配置文件，建议进行拆分，便于管理和复用。
 
+## 三份 config
+
+
 # TBD
 - `npm run start` 使用 `webpack-dev-server` 有预览功能，但是 `npm run build` 没有，最好添加一个 `express` 处理
 - `webpack-dev-server` 可以替换为 `express` + `webpack-dev-middleware` + `webpack-hot-middleware`
-
+- [] 如何一个工程配置多个主题
+- [] css, html 多加入 lint, 最好配合 perttier
+- [] perttier 使用 eslint 的 config?
