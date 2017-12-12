@@ -6,11 +6,11 @@
   "scripts": {
     "precommit": "lint-staged",
     "start": "webpack-dev-server --config build/webpack.config.js --env development",
-    "build": "webpack --config build/webpack.config.js --display-modules --env production",
-    "lint:js": "eslint app"
+    "build": "webpack --config build/webpack.config.js --display-modules --env production"
   },
   "lint-staged": {
     "src/**/*.js": [
+      "prettier --write",
       "eslint --fix",
       "git add"
     ]
