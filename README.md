@@ -3,6 +3,22 @@ Support es6 module, postcss.
 
 Write you code, export umd format library.
 
+# 目录说明
+- build: webpack 配置文件, 参考的 vue-cli 脚手架
+- dist: 构建输出的目录
+- example: demo 示例
+- src: 源码目录
+- `.babelrc`: babelrc 配置文件
+- `.browserslistrc`: Browserslist 配置文件
+- `.editorconfig`: editorconfig 配置文件
+- `eslintignore`: eslint 忽略列表
+- `eslintrc.js`: eslint 配置文件
+- `.gitignore`: git 忽略列表
+- `.postcssrc.js`: postcss 配置文件
+- `.prettierrc`: Prettier 配置文件
+- `.travis.yml`: TravisCI 配置文件
+- `package.json`: 项目 package.json
+- `package-lock.json`: npm5 带的版本锁定功能
 
 
 # DevDependencies
@@ -36,7 +52,7 @@ Write you code, export umd format library.
 ## css
 - postcss-loader: 处理 css 代码
 - postcss-cssnext: postcss 的 preset 吧
-- css-loader: 支持引用CSS文件(import 方式), 只负责读取 css 文件内容（当作字符处理), 可设置 `modules: true` 支持 css modules
+- css-loader: 支持引用CSS文件(import 方式), 只负责读取 css 文件内容(当作字符处理), 可设置 `modules: true` 支持 css modules
 - style-loader: 将解析的 css 内容，通过 style 标签插入页面 head 中, 所以一般 style-loader 作为最后处理
 - extract-text-webpack-plugin: 负责将 css 输出成文件
 
