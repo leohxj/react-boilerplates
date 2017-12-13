@@ -9,7 +9,7 @@ Write you code, export umd format library.
 - example: demo 示例
 - src: 源码目录
 - `.babelrc`: babelrc 配置文件
-- `.browserslistrc`: Browserslist 配置文件
+- `.browserslistrc`: Browserslist 配置文件, cssnext, babel-preset-env 好多都是用这个
 - `.editorconfig`: editorconfig 配置文件
 - `eslintignore`: eslint 忽略列表
 - `eslintrc.js`: eslint 配置文件, eslint 推荐使用 .js 文件维护配置, 可能是好维护注释吧.
@@ -62,9 +62,9 @@ Write you code, export umd format library.
 - stylelint-config-standard: 一些最佳实践的集合
 - stylelint-webpack-plugin: stylelint 结合 webpack 的插件
 
-#### 结合 postcss
+#### 结合 postcss (*not recommend*)
 - stylelint:
-- postcss-reporter: 将 stylelint 的结果报告出来, 但是目前都是给的 warning
+- postcss-reporter: 将 stylelint 的结果报告出来, 但是目前都是给的 warning, 推荐使用结合 webpack 的方式
 
 
 

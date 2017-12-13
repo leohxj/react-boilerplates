@@ -7,7 +7,7 @@ const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-// const StylelintPlugin = require('stylelint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 // 拼接目录路径
 function resolve(dir) {
@@ -88,9 +88,9 @@ const developmentConfig = {
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
-    // new StylelintPlugin({
-    //   files: ['**/*.?(l|p)css']
-    // })
+    new StylelintPlugin({
+      files: ['**/*.?(l|p)css']
+    })
   ]
 };
 

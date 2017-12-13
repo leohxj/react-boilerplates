@@ -2,7 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "rule-empty-line-before": ["always", {
-      "severity": "error"
+      "severity": "warning"
     }],
     "font-family-no-missing-generic-family-keyword": null
   }
