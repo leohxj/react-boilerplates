@@ -7,7 +7,7 @@
 		exports["customLib"] = factory();
 	else
 		root["customLib"] = factory();
-})(this, function() {
+})(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -87,7 +87,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 document.body.appendChild(Object(__WEBPACK_IMPORTED_MODULE_0__component__["a" /* default */])());
+
 Object.assign({}, { a: 1 });
+
+// var x= 22'
 
 
 /***/ }),
