@@ -92,3 +92,4 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 
 # Tips
 - 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)
+- broswerlist 怎么配是个问题, 站点性质的, 加上 `CN` 处理下吧
