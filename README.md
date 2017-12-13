@@ -30,7 +30,7 @@ Write you code, export umd format library.
 ## webpack
 - webpack: 核心功能
 - webpack-dev-server: dev 环境下使用，实现自动更新, 静态服务器等功能
-- friendly-errors-webpack-plugin: 在开发环境下，提供更好的编译体验
+- friendly-errors-webpack-plugin: 在开发环境下，提供更好的编译体验, 输出还是会保留 webpack 原始的报错
 
 ## babel
 - babel-core: babel 核心功能
@@ -60,6 +60,7 @@ Write you code, export umd format library.
 ### stylelint
 - stylelint: 校验 css 代码
 - stylelint-config-standard: 一些最佳实践的集合
+- stylelint-webpack-plugin: stylelint 结合 webpack 的插件
 
 ## html
 - html-webpack-plugin: 生成 html 文件，注入相关 webpack 生成的脚本
