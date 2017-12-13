@@ -62,6 +62,13 @@ Write you code, export umd format library.
 - stylelint-config-standard: 一些最佳实践的集合
 - stylelint-webpack-plugin: stylelint 结合 webpack 的插件
 
+#### 结合 postcss
+- stylelint:
+- postcss-reporter: 将 stylelint 的结果报告出来, 但是目前都是给的 warning
+
+
+
+
 ## html
 - html-webpack-plugin: 生成 html 文件，注入相关 webpack 生成的脚本
 

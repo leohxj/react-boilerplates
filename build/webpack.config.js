@@ -7,7 +7,7 @@ const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
+// const StylelintPlugin = require('stylelint-webpack-plugin');
 
 // 拼接目录路径
 function resolve(dir) {
@@ -52,8 +52,10 @@ const developmentConfig = {
     // overlay: true is equivalent
     overlay: {
       errors: true,
-      warnings: true,
+      warnings: false,
     },
+    // 配合 FriendlyErrorsWebpackPlugin, 只展示 Friendly 处理后的
+    quiet: true
   },
   devtool: 'cheap-module-eval-source-map',
   module: {
@@ -86,9 +88,9 @@ const developmentConfig = {
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
-    new StylelintPlugin({
-      files: ['**/*.?(l|p)css']
-    })
+    // new StylelintPlugin({
+    //   files: ['**/*.?(l|p)css']
+    // })
   ]
 };
 
