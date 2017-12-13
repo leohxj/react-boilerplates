@@ -81,3 +81,7 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 - [] 如何一个工程配置多个主题
 - [] css, html 多加入 lint, 最好配合 perttier
 - [x] prettier 自己加规则, 尽量配合 eslint, lint-staged 先 prettier 再 eslint --fix
+
+
+# Tips
+- 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)
