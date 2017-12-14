@@ -1,7 +1,10 @@
 /**
  * This file used by node.js
  * So, using CommonJS to write code
+ * And add 'use strict'
  */
+'use strict'
+
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
@@ -140,7 +143,9 @@ const productionConfig = {
     new UglifyJsPlugin({
       sourceMap: true,
       uglifyOptions: {
-        warnings: false
+        compress: {
+          drop_console: true
+        }
       }
     })
   ]
