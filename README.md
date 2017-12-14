@@ -85,12 +85,12 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 ## 三份 config
 
 # TBD
-- `npm run start` 使用 `webpack-dev-server` 有预览功能，但是 `npm run build` 没有，最好添加一个 `express` 处理
-- `webpack-dev-server` 可以替换为 `express` + `webpack-dev-middleware` + `webpack-hot-middleware`
-- [] 如何一个工程配置多个主题
-- [] css, html 多加入 lint, 最好配合 perttier
-- [x] prettier 自己加规则, 尽量配合 eslint, lint-staged 先 prettier 再 eslint --fix
-
+[] `npm run start` 使用 `webpack-dev-server` 有预览功能，但是 `npm run build` 没有，最好添加一个 `express` 处理
+[x] `webpack-dev-server` 可以替换为 `express` + `webpack-dev-middleware` + `webpack-hot-middleware`
+[] 如何一个工程配置多个主题
+[] css, html 多加入 lint, 最好配合 perttier
+[x] prettier 自己加规则, 尽量配合 eslint, lint-staged 先 prettier 再 eslint --fix
+[] babel-preset-env 如何设置
 
 # Tips
 - 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)

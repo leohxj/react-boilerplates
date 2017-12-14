@@ -8,7 +8,7 @@ const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
@@ -26,8 +26,24 @@ const commonConfig = {
   output: {
     filename: '[name].js',
     path: resolve('dist'),
-    library: 'customLib',
-    libraryTarget: 'umd'
+    library: '[name]',
+    libraryTarget: 'umd',
+    libraryExport: 'default'
+  },
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: resolve('node_modules'),
+        loader: 'eslint-loader'
+      },
+      {
+        test: /\.js$/,
+        exclude: resolve('node_modules'),
+        loader: 'babel-loader'
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -65,17 +81,6 @@ const developmentConfig = {
   devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        exclude: resolve('node_modules'),
-        loader: 'eslint-loader'
-      },
-      {
-        test: /\.js$/,
-        exclude: resolve('node_modules'),
-        loader: 'babel-loader'
-      },
       {
         test: /\.pcss$/,
         exclude: resolve('node_modules'),
@@ -137,9 +142,6 @@ const productionConfig = {
       uglifyOptions: {
         warnings: false
       }
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Webpack demo'
     })
   ]
 };
