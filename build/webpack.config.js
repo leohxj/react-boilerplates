@@ -3,11 +3,16 @@
  * So, using CommonJS to write code
  */
 const path = require('path');
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+
+const ROOT = path.join(__dirname, '..');
 
 // 拼接目录路径
 function resolve(dir) {
@@ -26,9 +31,9 @@ const commonConfig = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack demo',
-    }),
-  ],
+      title: 'Webpack demo'
+    })
+  ]
 };
 
 const developmentConfig = {
@@ -52,18 +57,19 @@ const developmentConfig = {
     // overlay: true is equivalent
     overlay: {
       errors: true,
-      warnings: false,
+      warnings: false
     },
     // 配合 FriendlyErrorsWebpackPlugin, 只展示 Friendly 处理后的
     quiet: true
   },
   devtool: 'cheap-module-eval-source-map',
   module: {
-    rules: [{
+    rules: [
+      {
         enforce: 'pre',
         test: /\.js$/,
         exclude: resolve('node_modules'),
-        loader: 'eslint-loader',
+        loader: 'eslint-loader'
       },
       {
         test: /\.js$/,
@@ -75,7 +81,8 @@ const developmentConfig = {
         exclude: resolve('node_modules'),
         use: [
           'style-loader',
-          { loader: 'css-loader',
+          {
+            loader: 'css-loader',
             options: {
               sourceMap: true,
               importLoaders: 1
@@ -95,34 +102,49 @@ const developmentConfig = {
 };
 
 const productionConfig = {
+  devtool: 'source-map',
   module: {
-    rules: [ {
-      test: /\.pcss$/,
-      exclude: resolve('node_modules'),
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [{
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
+    rules: [
+      {
+        test: /\.pcss$/,
+        exclude: resolve('node_modules'),
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1
+              }
+            },
+            {
+              loader: 'postcss-loader'
             }
-          },
-          {
-            loader: 'postcss-loader'
-          }
-        ]
-      })
-    }]
+          ]
+        })
+      }
+    ]
   },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
-    new HtmlWebpackPlugin({
-      title: 'Webpack demo',
+    new CleanWebpackPlugin(['dist'], {
+      root: ROOT
     }),
-  ],
+    new webpack.LoaderOptionsPlugin({ minimize: true }),
+    //https://webpack.js.org/guides/migrating/#uglifyjsplugin-minimize-loaders
+    new ExtractTextPlugin('[name].css'),
+    new UglifyJsPlugin({
+      sourceMap: true,
+      uglifyOptions: {
+        warnings: false
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Webpack demo'
+    })
+  ]
 };
 
-const getConfigs = config => merge(commonConfig, config);
+const getConfigs = (config) => merge(commonConfig, config);
 
 module.exports = (env) => {
   if (env === 'production') {

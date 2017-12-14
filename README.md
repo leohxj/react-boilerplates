@@ -31,6 +31,8 @@ Write you code, export umd format library.
 - webpack: 核心功能
 - webpack-dev-server: dev 环境下使用，实现自动更新, 静态服务器等功能
 - friendly-errors-webpack-plugin: 在开发环境下，提供更好的编译体验, 输出还是会保留 webpack 原始的报错
+- clean-webpack-plugin: rimraf 的作用, 每次 build 情况下目录
+- uglifyjs-webpack-plugin: 压缩 JS 代码, webpack.optimize.UglifyJSPlugin 也能用, 只不过 webpack 内置的 Uglifyjs 版本低一点
 
 ## babel
 - babel-core: babel 核心功能
@@ -93,3 +95,4 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 # Tips
 - 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)
 - broswerlist 怎么配是个问题, 站点性质的, 加上 `CN` 处理下吧
+- sourcemap, 生产环境还是输出下吧, 有时候定位或配合监控平台会不错
