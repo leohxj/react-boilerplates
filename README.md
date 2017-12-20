@@ -39,9 +39,10 @@ Write you code, export umd format library.
 - babel-loader: 处理 ES6 代码，推荐安装 `yarn add babel-loader babel-core babel-preset-env webpack --dev`
 - babel-preset-env: babel 的 preset
 - babel-preset-stage-2: 接近稳定的标准 preset
-- babel-plugin-transform-runtime: runtime 期间的 polyfill
-- babel-runtime: build 时候使用的
-- babel-polyfill: 转换 ES6 的API, 配合 babel-preset-env 设置 `useBuildIn: true` 可减少打包体积，安装在 dependencies 中
+- babel-runtime: polyfill 的一种方式
+- babel-plugin-transform-runtime: runtime 期间的 polyfill, 自动加载需要 polyfill 的内容
+- babel-polyfill: 如果开发的是应用级别, 使用 `babel-polyfill` 替代上面的 `runtime`.
+  - 配合 babel-preset-env 设置 `useBuildIn: true` 可减少打包体积，安装在 dependencies 中
 
 
 ## eslint
@@ -92,7 +93,8 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 [x] prettier 自己加规则, 尽量配合 eslint, lint-staged 先 prettier 再 eslint --fix
 [] babel-preset-env 如何设置
 [] 压缩处理, babel-preset-minify, uglify 添加 drop 参数
-
+[] webpack 文件可以用 es6 去写.
+[] .babelrc 如何区分 dev, prod 环境, 去加载 polyfill
 
 # Tips
 - 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)
