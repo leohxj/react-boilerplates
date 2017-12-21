@@ -6,10 +6,10 @@ module.exports = {
     es6: true,
     commonjs: true
   },
-  parserOptions: {
-    sourceType: 'module'
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
-  plugins: ['import'],
   rules: {
     'class-methods-use-this': 'off',
     'comma-dangle': 'off',
