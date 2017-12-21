@@ -39,7 +39,10 @@ const commonConfig = {
         enforce: 'pre',
         test: /\.js$/,
         exclude: resolve('node_modules'),
-        loader: 'eslint-loader'
+        loader: 'eslint-loader',
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
       },
       {
         test: /\.js$/,
