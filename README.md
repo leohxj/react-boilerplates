@@ -1,7 +1,6 @@
 # umd-library-starter
-Support es6 module, postcss.
+A boilerplate with TypeScript, Babel, PostCSS, TSLint, StyleLint...
 
-Write you code, export umd format library.
 
 # 目录说明
 - build: webpack 配置文件, 参考的 vue-cli 脚手架
