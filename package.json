@@ -9,7 +9,7 @@
     "build": "webpack --config build/webpack.config.js --display-modules --env production"
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.ts": [
       "prettier --write",
       "tslint --fix",
       "git add"
