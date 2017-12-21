@@ -4,6 +4,7 @@ import './index.pcss';
 
 document.body.appendChild(component());
 
-// Object.assign({}, { a: 1 });
+const obj = {};
+Object.assign(obj, { a: 1 }, { a: 2 });
 
 console.log('xxx');

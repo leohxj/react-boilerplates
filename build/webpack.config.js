@@ -34,12 +34,12 @@ const commonConfig = {
     libraryExport: 'default'
   },
   resolve: {
-    extensions: ['.js', '.ts']
+    extensions: ['.js', '.ts', '.tsx']
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         exclude: resolve('node_modules'),
         use: ['babel-loader', 'ts-loader']
       }
