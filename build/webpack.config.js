@@ -3,7 +3,7 @@
  * So, using CommonJS to write code
  * And add 'use strict'
  */
-'use strict'
+'use strict';
 
 const path = require('path');
 const webpack = require('webpack');
@@ -24,7 +24,7 @@ function resolve(dir) {
 
 const commonConfig = {
   entry: {
-    bundle: resolve('src') // same as resolve('src/index.js');
+    bundle: resolve('src/index.ts') // same as resolve('src/index.js');
   },
   output: {
     filename: '[name].js',
@@ -33,18 +33,15 @@ const commonConfig = {
     libraryTarget: 'umd',
     libraryExport: 'default'
   },
+  resolve: {
+    extensions: ['.js', '.ts']
+  },
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: resolve('node_modules'),
-        loader: 'eslint-loader'
-      },
-      {
-        test: /\.js$/,
-        exclude: resolve('node_modules'),
-        loader: 'babel-loader'
+        use: ['babel-loader', 'ts-loader']
       }
     ]
   },

@@ -1,22 +1,26 @@
 module.exports = {
   extends: ['airbnb-base', 'prettier'],
   env: {
-    browser: true,
-    node: true,
-    es6: true,
-    commonjs: true
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true
   },
-  parserOptions: {
-    sourceType: 'module'
-  },
-  plugins: ['import'],
   rules: {
-    'class-methods-use-this': 'off',
     'comma-dangle': 'off',
     'global-require': 'off',
-    'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
-    'max-len': 'off',
+    'no-param-reassign': 'off',
+    'class-methods-use-this': 'warn',
+    'max-len': 'warn',
+    'no-unused-vars': 'warn',
+    'no-use-before-define': 'warn',
+    'no-console': [
+      'warn',
+      {
+        allow: ['info', 'warn', 'error']
+      }
+    ],
     'no-underscore-dangle': 'off'
   }
 };
