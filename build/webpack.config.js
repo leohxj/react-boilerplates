@@ -157,7 +157,7 @@ const productionConfig = {
 const getConfigs = (config) => merge(commonConfig, config);
 
 module.exports = (env) => {
-  if (env === 'production') {
+  if (process.env.NODE_ENV === 'production') {
     return getConfigs(productionConfig);
   }
   return getConfigs(developmentConfig);
