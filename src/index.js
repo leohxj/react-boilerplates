@@ -1,9 +1,9 @@
-import component from './component';
+import Component from './component';
 
 import './index.pcss';
 
-document.body.appendChild(component());
+document.body.appendChild(new Component().render());
 
 Object.assign({}, { a: 1 });
 
-console.log('xxx');
+// console.log('xxx');
