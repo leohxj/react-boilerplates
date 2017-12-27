@@ -21,7 +21,6 @@ const ROOT = path.join(__dirname, '..');
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
-
 const commonConfig = {
   entry: {
     bundle: resolve('src') // same as resolve('src/index.js');
@@ -142,7 +141,9 @@ const productionConfig = {
     }),
     // strip dev-only code in Vue source
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
+      }
     }),
     new webpack.LoaderOptionsPlugin({ minimize: true }),
     //https://webpack.js.org/guides/migrating/#uglifyjsplugin-minimize-loaders

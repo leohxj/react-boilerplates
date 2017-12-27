@@ -5,5 +5,3 @@ import './index.pcss';
 document.body.appendChild(new Component().render());
 
 Object.assign({}, { a: 1 });
-
-// console.log('xxx');

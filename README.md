@@ -25,7 +25,7 @@ Write you code, export umd format library.
 # DevDependencies
 
 ## base
-- cross-env: TODO: 区分环境，目前直接使用 webpack 命令后加参数  `--env` 参数。遇到兼容问题再替换吧。
+- cross-env: 区分环境变量，交给 webpack.config.js 文件中处理, 浏览器端的源码中，需要配合 definePlugin 使用
 
 ## webpack
 - webpack: 核心功能
@@ -86,7 +86,7 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 ## 三份 config
 
 # TBD
-[] `npm run start` 使用 `webpack-dev-server` 有预览功能，但是 `npm run build` 没有，最好添加一个 `express` 处理
+[x] `npm run start` 使用 `webpack-dev-server` 有预览功能，但是 `npm run build` 没有，最好添加一个 `express` 处理
 [x] `webpack-dev-server` 可以替换为 `express` + `webpack-dev-middleware` + `webpack-hot-middleware`
 [] 如何一个工程配置多个主题
 [] css, html 多加入 lint, 最好配合 perttier
@@ -95,7 +95,8 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 [] 压缩处理, babel-preset-minify, uglify 添加 drop 参数
 [] webpack 文件可以用 es6 去写.
 [] .babelrc 如何区分 dev, prod 环境, 去加载 polyfill
-[] Specify the Environment, using webpack DefinePlugin
+[x] 如果你的 library 需要区分 dev 模式（加一下调试注释），那么源码中可以使用 `process.env.NODE_ENV !== 'production'` 进行判断，然后通过 DefinePlugin 注入 `process.env.NODE_ENV`
+[] 同时输出压缩版本和未压缩版本
 
 # Tips
 - 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)
