@@ -95,6 +95,7 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 [] 压缩处理, babel-preset-minify, uglify 添加 drop 参数
 [] webpack 文件可以用 es6 去写.
 [] .babelrc 如何区分 dev, prod 环境, 去加载 polyfill
+[] Specify the Environment, using webpack DefinePlugin
 
 # Tips
 - 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)

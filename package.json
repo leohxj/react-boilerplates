@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "start": "cross-env NODE_ENV=developer webpack-dev-server --config build/webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js --display-modules"
   },
   "lint-staged": {

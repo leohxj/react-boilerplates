@@ -3,7 +3,7 @@
  * So, using CommonJS to write code
  * And add 'use strict'
  */
-'use strict'
+'use strict';
 
 const path = require('path');
 const webpack = require('webpack');
@@ -139,6 +139,10 @@ const productionConfig = {
   plugins: [
     new CleanWebpackPlugin(['dist'], {
       root: ROOT
+    }),
+    // strip dev-only code in Vue source
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
     new webpack.LoaderOptionsPlugin({ minimize: true }),
     //https://webpack.js.org/guides/migrating/#uglifyjsplugin-minimize-loaders
