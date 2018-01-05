@@ -1,3 +1,5 @@
+import './vendor';
+
 import Component from './component';
 
 import './index.pcss';
