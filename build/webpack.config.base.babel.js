@@ -1,5 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
+import FlowWebpackPlugin from 'flow-webpack-plugin';
 
 import { resolve } from './utils';
 
@@ -38,6 +39,7 @@ export default {
     }),
     new StylelintPlugin({
       files: ['**/*.?(l|p)css']
-    })
+    }),
+    new FlowWebpackPlugin()
   ]
 };

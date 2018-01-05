@@ -44,6 +44,9 @@ Write you code, export umd format library.
 - babel-polyfill: 如果开发的是应用级别, 使用 `babel-polyfill` 替代上面的 `runtime`.
   - 配合 babel-preset-env 设置 `useBuildIn: true` 可减少打包体积，安装在 dependencies 中
 
+## Flow
+- babel-preset-flow: 提供编译去除 flow 相关代码的能力
+
 
 ## eslint
 - eslint: eslint 核心功能
