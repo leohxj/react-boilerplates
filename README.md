@@ -45,7 +45,9 @@ Write you code, export umd format library.
   - 配合 babel-preset-env 设置 `useBuildIn: true` 可减少打包体积，安装在 dependencies 中
 
 ## Flow
+- flow-bin: 初次执行, 需要运行 `yarn run flow init`
 - babel-preset-flow: 提供编译去除 flow 相关代码的能力
+- eslint-plugin-flowtype: 结合 eslint 校验 flow
 
 
 ## eslint

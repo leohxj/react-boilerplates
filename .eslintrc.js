@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['airbnb-base', 'prettier'],
-  "plugins": ["flowtype"],
+  extends: ['airbnb-base', 'plugin:flowtype/recommended', 'prettier'],
+  plugins: ['flowtype'],
   env: {
     browser: true,
     node: true,
