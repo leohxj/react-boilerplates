@@ -5,9 +5,7 @@ import Component from './component';
 
 import './index.pcss';
 
-window.document.body.appendChild(new Component().render());
-
-Object.assign({}, { a: 1 });
+window.document.getElementById('app').appendChild(new Component().render());
 
 function foo(x: ?string): string {
   if (x) {
@@ -18,4 +16,4 @@ function foo(x: ?string): string {
 
 console.log('foo:', foo);
 
-window.document.body.innerHTML = foo('22');
+// window.document.body.innerHTML = foo('22');

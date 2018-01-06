@@ -1,4 +1,3 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
 import FlowWebpackPlugin from 'flow-webpack-plugin';
 
@@ -34,9 +33,6 @@ export default {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Webpack demo'
-    }),
     new StylelintPlugin({
       files: ['**/*.?(l|p)css']
     }),

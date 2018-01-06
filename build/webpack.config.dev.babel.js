@@ -1,5 +1,7 @@
 import merge from 'webpack-merge';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
+
 
 import baseConfig from './webpack.config.base.babel';
 import { resolve } from './utils';
@@ -50,7 +52,13 @@ const developmentConfig = merge(baseConfig, {
     ]
   },
   plugins: [
-    new FriendlyErrorsWebpackPlugin()
+    new FriendlyErrorsWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Webpack Application Boilerplate',
+      filename: 'index.html',
+      template: 'src/index.html',
+      inject: true,
+    })
   ]
 });
 

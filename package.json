@@ -7,7 +7,7 @@
     "precommit": "lint-staged",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.dev.babel.js",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.prod.babel.js --display-modules",
-    "test": "jest",
+    "test": "npm run flow && jest",
     "flow": "flow check",
     "commit": "git-cz"
   },
