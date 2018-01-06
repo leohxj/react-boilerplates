@@ -66,6 +66,13 @@ Write you code, export umd format library.
 - eslint-friendly-formatter: 精准定位出错附近的代码，显示出来
 - eslint-plugin-prettier: 配合 prettier 格式化
 
+## jest
+
+- jest: 测试框架
+  - eslintrc 需要开启 jest 环境
+  - npm scripts 添加 test 命令
+  - babelrc 添加 test 对应的 env, jest 执行会注入 BABEL_NODE = test
+
 ### css
 
 - postcss-loader: 处理 css 代码

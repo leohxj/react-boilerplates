@@ -4,6 +4,9 @@
   "env": {
     "production": {
       "presets": [["env", { "modules": false, "useBuiltIns": true }], "stage-2", "flow"]
+    },
+    "test": {
+      "presets": [["env"], "stage-2", "flow"]
     }
   }
 }

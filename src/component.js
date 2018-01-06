@@ -3,7 +3,7 @@ export default class Component {
     this.params = params;
   }
 
-  x = () => {};
+  x = () => 42;
 
   render(text = 'Hello World') {
     const element = document.createElement('div');
