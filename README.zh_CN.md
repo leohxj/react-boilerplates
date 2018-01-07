@@ -1,8 +1,6 @@
 # webpack application boilerplate
 
-Support es6 module, postcss.
-
-Write you code, export umd format library.
+[README in English](README.md)
 
 ## 目录说明
 
