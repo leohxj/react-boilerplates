@@ -1,12 +1,19 @@
 {
-  "presets": ["env", "stage-2", "flow"],
-  "plugins": [],
+  "presets": ["env", "stage-2", "react"],
+  "plugins": [
+    "transform-decorators-legacy",
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
+  ],
   "env": {
     "production": {
-      "presets": [["env", { "modules": false, "useBuiltIns": true }], "stage-2", "flow"]
+      "presets": [["env", { "modules": false, "useBuiltIns": true }], "stage-2", "react"],
+      "plugins": [
+        "transform-decorators-legacy",
+        ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
+      ]
     },
     "test": {
-      "presets": [["env"], "stage-2", "flow"]
+      "presets": [["env"], "stage-2", "react"]
     }
   }
 }

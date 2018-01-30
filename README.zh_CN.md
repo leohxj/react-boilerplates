@@ -42,6 +42,7 @@
 - babel-core: babel 核心功能
 - babel-loader: 处理 ES6 代码，推荐安装 `yarn add babel-loader babel-core babel-preset-env webpack --dev`
 - babel-preset-env: babel 的 preset
+- babel-preset-react: 包含 flow 和 jsx 的解析
 - babel-preset-stage-2: 接近稳定的标准 preset
 - babel-runtime: polyfill 的一种方式
 - babel-plugin-transform-runtime: runtime 期间的 polyfill, 自动加载需要 polyfill 的内容
@@ -60,9 +61,16 @@
 - eslint: eslint 核心功能
 - eslint-loader: webpack loader 处理代码是否符合 eslint 规范
 - eslint-config-airbnb-base: airbnb 最佳实践，但是有些 rules 不是很人性化，可以自行关闭
+- eslint-config-airbnb: 符合 react 的 eslint, 依赖
+    - eslint
+    - eslint-plugin-import
+    - eslint-plugin-jsx-a11y
+    - eslint-plugin-react
 - eslint-plugin-import: airbnb-base 依赖的 eslint plugin
 - eslint-friendly-formatter: 精准定位出错附近的代码，显示出来
 - eslint-plugin-prettier: 配合 prettier 格式化
+
+
 
 ## jest
 
@@ -123,10 +131,16 @@ webpack 配置文件，建议进行拆分，便于管理和复用。
 [] webpack 文件可以用 es6 去写.
 [] .babelrc 如何区分 dev, prod 环境, 去加载 polyfill
 [x] 如果你的 library 需要区分 dev 模式（加一下调试注释），那么源码中可以使用 `process.env.NODE_ENV !== 'production'` 进行判断，然后通过 DefinePlugin 注入 `process.env.NODE_ENV`
-[] 同时输出压缩版本和未压缩版本
+[x] 同时输出压缩版本和未压缩版本
+[] 是否需要借助 babel-plugin-flow-react-proptypes 去生成 runtime 的check???
 
 ## Tips
 
 - 代码质量校验, 最好都结合 webpack 构建处理, 这样能避免一些 lint-staged 的处理 (比如 `eslint --fix`)
 - broswerlist 怎么配是个问题, 站点性质的, 加上 `CN` 处理下吧
 - sourcemap, 生产环境还是输出下吧, 有时候定位或配合监控平台会不错
+
+## 如何结合 Flow
+- 第三方的库, 需要添加 flow-typed 进行管理
+
+

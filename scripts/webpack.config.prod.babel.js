@@ -7,20 +7,50 @@ import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 import { resolve } from './utils';
 import baseConfig from './webpack.config.base.babel';
+import theme from '../src/theme/theme-global';
 
 const productionConfig = merge(baseConfig, {
   devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.pcss$/,
-        exclude: resolve('node_modules'),
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader']
+        })
+      },
+      {
+        test: /\.less$/,
+        include: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
             {
               loader: 'css-loader',
               options: {
+                importLoaders: 1
+              }
+            },
+            {
+              loader: 'less-loader',
+              options: {
+                modifyVars: theme()
+              }
+            }
+          ]
+        })
+      },
+      {
+        test: /\.(pcss)?$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
                 importLoaders: 1
               }
             },

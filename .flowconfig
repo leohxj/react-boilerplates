@@ -5,8 +5,11 @@
 .*/examples/.*
 
 [include]
+src/*.jsx
+src/*.js
 
 [libs]
+flow-typed
 
 [lints]
 

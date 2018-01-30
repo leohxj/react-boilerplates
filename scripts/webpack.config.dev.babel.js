@@ -2,9 +2,9 @@ import merge from 'webpack-merge';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 
-
 import baseConfig from './webpack.config.base.babel';
-import { resolve } from './utils';
+
+import theme from '../src/theme/theme-global';
 
 const developmentConfig = merge(baseConfig, {
   devServer: {
@@ -34,9 +34,14 @@ const developmentConfig = merge(baseConfig, {
   devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
+      // 针对 node_module 中的样式做处理
       {
-        test: /\.pcss$/,
-        exclude: resolve('node_modules'),
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.less$/,
+        include: /node_modules/,
         use: [
           'style-loader',
           {
@@ -44,6 +49,23 @@ const developmentConfig = merge(baseConfig, {
             options: {
               sourceMap: true,
               importLoaders: 1
+            }
+          },
+          { loader: 'less-loader', options: { sourceMap: true, modifyVars: theme() } }
+        ]
+      },
+      {
+        test: /\.(pcss)?$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[path][name]__[local]'
             }
           },
           { loader: 'postcss-loader', options: { sourceMap: true } }
@@ -57,7 +79,7 @@ const developmentConfig = merge(baseConfig, {
       title: 'Webpack Application Boilerplate',
       filename: 'index.html',
       template: 'src/index.html',
-      inject: true,
+      inject: true
     })
   ]
 });
