@@ -11,6 +11,7 @@ type State = {
 };
 
 export default class Hello extends PureComponent<Props, State> {
+  // 如果有 defaultProps Props 上不需要标注么...?
   static defaultProps = {
     name: 'Hello Router'
   };

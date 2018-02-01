@@ -4,7 +4,7 @@
   "description": "A bootstrap for webpack3 project",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config scripts/webpack.config.dev.babel.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config scripts/webpack.config.dev.babel.js --hot",
     "build": "cross-env NODE_ENV=production webpack --config scripts/webpack.config.prod.babel.js --display-modules",
     "test": "npm run flow && jest",
     "flow": "flow check",
@@ -35,19 +35,12 @@
   "author": "Leo Hui <leohxj@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "antd": "^3.1.1",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.5",
-    "history": "^4.7.2",
-    "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
+    "react-hot-loader": "^4.0.0-beta.18",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "^5.0.0-alpha.9",
-    "redux": "^3.7.2",
-    "redux-actions": "^2.2.1",
-    "redux-promise": "^0.5.3",
     "url-search-params": "^0.10.0"
   },
   "devDependencies": {

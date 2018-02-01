@@ -46,3 +46,7 @@
  ├── tree.md
  └── yarn.lock
 ```
+
+
+## Tips
+- 如果应用有统一的头尾, 只是内部发生变化, 那么可以保留 layouts 目录, 否则可以建立 routes 目录

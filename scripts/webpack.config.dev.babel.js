@@ -4,8 +4,6 @@ import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 
 import baseConfig from './webpack.config.base.babel';
 
-import theme from '../src/theme/theme-global';
-
 const developmentConfig = merge(baseConfig, {
   devServer: {
     // Enable history API fallback so HTML5 History API based
@@ -28,6 +26,7 @@ const developmentConfig = merge(baseConfig, {
       errors: true,
       warnings: false
     },
+    disableHostCheck: true,
     // 配合 FriendlyErrorsWebpackPlugin, 只展示 Friendly 处理后的
     quiet: true
   },
@@ -51,7 +50,7 @@ const developmentConfig = merge(baseConfig, {
               importLoaders: 1
             }
           },
-          { loader: 'less-loader', options: { sourceMap: true, modifyVars: theme() } }
+          { loader: 'less-loader', options: { sourceMap: true } }
         ]
       },
       {

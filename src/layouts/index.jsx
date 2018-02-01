@@ -5,31 +5,32 @@
  *
  * Created Date: Fri, 2018-01-12 16:43:13
  *
- * Last Modified: Fri, 2018-01-12 23:37:55
+ * Last Modified: Thu, 2018-02-01 21:34:09
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 
 /* @flow */
 import React, { PureComponent } from 'react';
-import { ConnectedRouter } from 'react-router-redux';
-import { Layout } from 'antd';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { hot } from 'react-hot-loader';
 
-import history from '../history';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 
-export default class Layouts extends PureComponent<{}> {
+class Layouts extends PureComponent<{}> {
   render() {
     return (
-      <ConnectedRouter history={history}>
-        <Layout className="page-wrapper">
+      <Router>
+        <div className="page-wrapper">
           <Header />
           <Main />
           <Footer />
-        </Layout>
-      </ConnectedRouter>
+        </div>
+      </Router>
     );
   }
 }
+
+export default hot(module)(Layouts);
