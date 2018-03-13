@@ -13,7 +13,7 @@ type State = {
 export default class NotFound extends PureComponent<Props, State> {
   static defaultProps = {
     name: '404 not found :)'
-  }
+  };
 
   state = {
     name: this.props.name

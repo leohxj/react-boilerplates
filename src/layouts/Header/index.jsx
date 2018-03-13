@@ -6,7 +6,7 @@ export default class Header extends PureComponent<{}> {
   render() {
     return (
       <div>
-        <header >
+        <header>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>

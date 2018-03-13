@@ -4,15 +4,12 @@ import React, { PureComponent } from 'react';
 
 import Clock from '../../components/Clock';
 
-type Props = {
-};
+type Props = {};
 
 export default class ClockPage extends PureComponent<Props> {
-  handleRename = () => {
-  };
+  handleRename = () => {};
 
-  handleAsyncPlus = () => {
-  };
+  handleAsyncPlus = () => {};
 
   render() {
     return (

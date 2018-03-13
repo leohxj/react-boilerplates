@@ -9,7 +9,6 @@
  *
  */
 
-
 /* @flow */
 import React, { PureComponent } from 'react';
 
@@ -18,7 +17,6 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import Home from '../../containers/HomePage';
 import Clock from '../../containers/ClockPage';
 import NotFound from '../../containers/NotFound';
-
 
 // $FlowFixMe, 通过 es7 stage1 decorators
 @withRouter

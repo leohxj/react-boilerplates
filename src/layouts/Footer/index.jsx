@@ -1,5 +1,5 @@
 /* @flow */
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from 'react';
 
 export default class Footer extends PureComponent<{}> {
   render() {
@@ -7,8 +7,6 @@ export default class Footer extends PureComponent<{}> {
       <div>
         <footer>footer</footer>
       </div>
-    )
+    );
   }
 }
-
-

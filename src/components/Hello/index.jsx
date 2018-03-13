@@ -25,8 +25,8 @@ export default class Hello extends PureComponent<Props, State> {
     this.setState({
       ...this.state,
       ...nextProps
-    })
-  }
+    });
+  };
 
   render() {
     return (

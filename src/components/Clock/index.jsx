@@ -5,11 +5,11 @@ import React, { PureComponent } from 'react';
 
 type Props = {
   date: string
-}
+};
 
 type State = {
   date: string
-}
+};
 
 export default class Clock extends PureComponent<Props, State> {
   timer: number;
@@ -23,7 +23,7 @@ export default class Clock extends PureComponent<Props, State> {
     this.timer = setInterval(() => this.tick(), 1000);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     clearInterval(this.timer);
   }
 

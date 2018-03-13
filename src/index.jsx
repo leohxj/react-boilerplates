@@ -9,10 +9,7 @@ import Layout from './layouts';
 const MOUNT_NODE = document.getElementById('root');
 
 const render = () => {
-  ReactDOM.render(
-    <Layout />,
-    (MOUNT_NODE: any)
-  );
+  ReactDOM.render(<Layout />, (MOUNT_NODE: any));
 };
 
 render();
