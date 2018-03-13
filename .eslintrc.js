@@ -1,6 +1,12 @@
 module.exports = {
-  extends: ['airbnb', 'plugin:flowtype/recommended', 'prettier'],
-  plugins: ['flowtype'],
+  extends: [
+    'airbnb',
+    'plugin:flowtype/recommended',
+    'prettier',
+    'prettier/flowtype',
+    'prettier/react'
+  ],
+  plugins: ['flowtype', 'prettier'],
   env: {
     browser: true,
     node: true,
@@ -8,7 +14,7 @@ module.exports = {
     commonjs: true,
     jest: true
   },
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   rules: {
     'class-methods-use-this': 'off',
     'comma-dangle': 'off',
@@ -17,16 +23,13 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'max-len': 'off',
     'no-underscore-dangle': 'off',
-    "react/prefer-stateless-function": "off",
-    "no-param-reassign": "off",
-    "react/sort-comp": [1, {
-      order: [
-        'type-annotations',
-        'static-methods',
-        'lifecycle',
-        'everything-else',
-        'render',
-      ],
-    }]
+    'react/prefer-stateless-function': 'off',
+    'no-param-reassign': 'off',
+    'react/sort-comp': [
+      1,
+      {
+        order: ['type-annotations', 'static-methods', 'lifecycle', 'everything-else', 'render']
+      }
+    ]
   }
 };

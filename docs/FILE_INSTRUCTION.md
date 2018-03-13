@@ -50,3 +50,7 @@
 
 ## Tips
 - 如果应用有统一的头尾, 只是内部发生变化, 那么可以保留 layouts 目录, 否则可以建立 routes 目录
+
+- eslint 使用 airbnb 的话, 需要 peerDependencies 安装, 才能让 eslint 在项目级别查找到依赖.
+  - 使用 airbnb 的配置的话, 不需要声明 plugin: ['react'], 因为 airbnb 已经内置声明了
+  - prettier 的话, 还是要声明下
