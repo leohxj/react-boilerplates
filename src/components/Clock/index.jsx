@@ -20,11 +20,11 @@ export default class Clock extends PureComponent<Props, State> {
   };
 
   componentDidMount() {
-    this.timer = setInterval(() => this.tick(), 1000);
+    this.timer = window.setInterval(() => this.tick(), 1000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer);
+    window.clearInterval((this.timer: number));
   }
 
   tick() {

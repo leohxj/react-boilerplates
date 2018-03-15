@@ -34,7 +34,7 @@ pids
 
 # Editor directories and files
 .idea
-.vscode
+# .vscode
 
 # Dependency directories
 node_modules
