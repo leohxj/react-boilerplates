@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'airbnb',
+    '@leohxj/eslint-config-dawn-react',
     'plugin:flowtype/recommended',
     "plugin:prettier/recommended",
     'prettier/flowtype',
