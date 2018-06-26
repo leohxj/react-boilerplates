@@ -6,7 +6,7 @@
  *
  * Created Date: Tue, 2018-01-09 17:12:51
  *
- * Last Modified: Tue, 2018-06-26 22:49:28
+ * Last Modified: Tue, 2018-06-26 22:53:37
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  * @flow
@@ -15,9 +15,9 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-import './styles/index.pcss';
-
 import Layout from './layouts';
+
+import './styles/index.pcss';
 
 const MOUNT_NODE = document.getElementById('root');
 
