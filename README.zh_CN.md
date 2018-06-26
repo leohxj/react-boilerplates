@@ -2,12 +2,17 @@
 
 [README in English](README.md)
 
+一个 React 的脚手架。只引入了 Route，没有引入 Redux, 也没有 UI 组件， 比如（antDesign）
+
+css 采取 postcss 方案。
+
+
 ## 目录说明
 
-- build: webpack 配置文件, 参考的 vue-cli 脚手架
 - dist: 构建输出的目录
 - example: demo 示例
 - src: 源码目录
+- scripts: webpack 配置文件
 - `.babelrc`: babelrc 配置文件
 - `.browserslistrc`: Browserslist 配置文件, cssnext, babel-preset-env 好多都是用这个
 - `.editorconfig`: editorconfig 配置文件
