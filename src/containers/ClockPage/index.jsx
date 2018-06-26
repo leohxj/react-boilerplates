@@ -16,10 +16,12 @@ export default class ClockPage extends PureComponent<Props> {
       <div className={classNames('home')}>
         <Clock date="xxx" />
 
-        <button type="primary" onClick={this.handleRename}>
+        <button type="button" onClick={this.handleRename}>
           rename
         </button>
-        <button onClick={this.handleAsyncPlus}>async Plus</button>
+        <button type="button" onClick={this.handleAsyncPlus}>
+          async Plus
+        </button>
       </div>
     );
   }

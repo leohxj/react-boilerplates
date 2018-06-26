@@ -16,22 +16,30 @@ export default class Hello extends PureComponent<Props, State> {
     name: 'Hello Router'
   };
 
-  state = {
-    name: this.props.name
-  };
+  constructor(props: Props) {
+    super(props);
+
+    const { name } = this.props;
+
+    this.state = {
+      name
+    };
+  }
 
   // 如果组件有对 props => state 的操作, 应该加上这个声明周期
   componentWillReceiveProps = (nextProps: Object) => {
-    this.setState({
-      ...this.state,
-      ...nextProps
-    });
+    this.setState((prevState, props) => ({
+      ...prevState,
+      ...props
+    }));
   };
 
   render() {
+    const { name } = this.state;
+
     return (
       <div className={classNames('c-hello')}>
-        <h1>{this.state.name}</h1>
+        <h1>{name}</h1>
       </div>
     );
   }
