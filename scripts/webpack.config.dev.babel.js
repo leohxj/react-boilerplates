@@ -5,6 +5,7 @@ import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 import baseConfig from './webpack.config.base.babel';
 
 const developmentConfig = merge(baseConfig, {
+  mode: 'development',
   devServer: {
     // Enable history API fallback so HTML5 History API based
     // routing works. Good for complex setups.

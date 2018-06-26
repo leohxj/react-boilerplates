@@ -10,6 +10,7 @@ import baseConfig from './webpack.config.base.babel';
 
 const productionConfig = merge(baseConfig, {
   devtool: 'source-map',
+  mode: 'production',
   module: {
     rules: [
       {

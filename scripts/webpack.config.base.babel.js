@@ -6,14 +6,13 @@
  *
  * Created Date: Tue, 2018-06-26 15:43:25
  *
- * Last Modified: Tue, 2018-06-26 20:34:16
+ * Last Modified: Tue, 2018-06-26 23:47:11
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 
 import StylelintPlugin from 'stylelint-webpack-plugin';
 import FlowWebpackPlugin from 'flow-webpack-plugin';
-import webpack from 'webpack';
 
 import { resolve } from './utils';
 
@@ -54,10 +53,18 @@ export default {
     new StylelintPlugin({
       files: ['**/*.?(l|p)css']
     }),
-    new FlowWebpackPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity
-    })
-  ]
+    new FlowWebpackPlugin()
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'initial',
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
+  }
 };
