@@ -43,8 +43,8 @@ export default {
     }),
     new FlowWebpackPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: "vendor",
-      minChunks: Infinity,
+      name: 'vendor',
+      minChunks: Infinity
     })
   ]
 };

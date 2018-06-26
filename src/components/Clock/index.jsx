@@ -14,10 +14,15 @@ type State = {
 export default class Clock extends PureComponent<Props, State> {
   timer: number;
 
-  // 等价与 constructor 中 this.state = {}
-  state = {
-    date: this.props.date
-  };
+  constructor(props: Props) {
+    super(props);
+
+    const { date } = this.props;
+
+    this.state = {
+      date
+    };
+  }
 
   componentDidMount() {
     this.timer = window.setInterval(() => this.tick(), 1000);
@@ -34,9 +39,10 @@ export default class Clock extends PureComponent<Props, State> {
   }
 
   render() {
+    const { date } = this.state;
     return (
       <div className={classNames('foo')}>
-        <h1>{this.state.date}</h1>
+        <h1>{date}</h1>
       </div>
     );
   }

@@ -15,14 +15,22 @@ export default class NotFound extends PureComponent<Props, State> {
     name: '404 not found :)'
   };
 
-  state = {
-    name: this.props.name
-  };
+  constructor(props: Props) {
+    super(props);
+
+    const { name } = this.props;
+
+    this.state = {
+      name
+    };
+  }
 
   render() {
+    const { name } = this.state;
+
     return (
       <div className={classNames('404')}>
-        <h1>{this.state.name}</h1>
+        <h1>{name}</h1>
       </div>
     );
   }
