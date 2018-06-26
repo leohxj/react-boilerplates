@@ -6,7 +6,7 @@
  *
  * Created Date: Tue, 2018-01-09 17:12:51
  *
- * Last Modified: Tue, 2018-06-26 17:09:22
+ * Last Modified: Tue, 2018-06-26 21:45:16
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  * @flow
@@ -14,6 +14,7 @@
 
 import * as React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css';
 
 import Layout from './layouts';
 

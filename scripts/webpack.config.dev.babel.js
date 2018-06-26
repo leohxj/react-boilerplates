@@ -42,26 +42,11 @@ const developmentConfig = merge(baseConfig, {
   devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
-      // 针对 node_module 中的样式做处理
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
-      {
-        test: /\.less$/,
-        include: /node_modules/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              importLoaders: 1
-            }
-          },
-          { loader: 'less-loader', options: { sourceMap: true } }
-        ]
-      },
+      // 如果结合 less 的话， postcss-loader 放在 css-loader 和 less-loader 之间, loader 执行顺序从右像左
       {
         test: /\.(pcss)?$/,
         exclude: /node_modules/,

@@ -1,3 +1,16 @@
+/**
+ * @file base 配置
+ * @description 详细说明
+ *
+ * @author Leo Hui <leohxj@gmail.com>
+ *
+ * Created Date: Tue, 2018-06-26 15:43:25
+ *
+ * Last Modified: Tue, 2018-06-26 20:34:16
+ * Last Modified By: Leo Hui <leohxj@gmail.com>
+ *
+ */
+
 import StylelintPlugin from 'stylelint-webpack-plugin';
 import FlowWebpackPlugin from 'flow-webpack-plugin';
 import webpack from 'webpack';
