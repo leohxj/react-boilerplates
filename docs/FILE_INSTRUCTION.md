@@ -1,9 +1,10 @@
 # 文件说明
 
 ## Tree
+生成的命令: `alder --exclude=".git|bower_components|node_modules" --depth=2 > tree.md`
+
 
 ```
-
  .
  ├── README.md
  ├── README.zh_CN.md
