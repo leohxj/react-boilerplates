@@ -29,6 +29,15 @@ const developmentConfig = merge(baseConfig, {
     disableHostCheck: true,
     // 配合 FriendlyErrorsWebpackPlugin, 只展示 Friendly 处理后的
     quiet: true
+
+    // publicPath 设置的话， 是使得 bundle 的文件，在此路径下访问
+    // publicPath: '/assets/',
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://leo.wapa.taobao.com:8080',
+    //     pathRewrite: { '^/api': '' }
+    //   }
+    // }
   },
   devtool: 'cheap-module-eval-source-map',
   module: {
