@@ -2287,7 +2287,7 @@ cosmiconfig@^4.0.0:
     parse-json "^4.0.0"
     require-from-string "^2.0.1"
 
-cosmiconfig@^5.0.0:
+cosmiconfig@^5.0.0, cosmiconfig@^5.0.2:
   version "5.0.5"
   resolved "http://r.cnpmjs.org/cosmiconfig/download/cosmiconfig-5.0.5.tgz#a809e3c2306891ce17ab70359dc8bdf661fe2cd0"
   dependencies:
@@ -4356,18 +4356,19 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/https-browserify/download/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-husky@^0.15.0-beta.16:
-  version "0.15.0-rc.3"
-  resolved "http://registry.npm.taobao.org/husky/download/husky-0.15.0-rc.3.tgz#13ea91a59bdf29fe8a2ccd6f90cd88e22bd21c76"
+husky@^1.0.0-rc.9:
+  version "1.0.0-rc.9"
+  resolved "http://r.cnpmjs.org/husky/download/husky-1.0.0-rc.9.tgz#9455788056b003327cff38f5c72285bb3ca485e9"
   dependencies:
-    cosmiconfig "^4.0.0"
+    cosmiconfig "^5.0.2"
     execa "^0.9.0"
+    find-up "^2.1.0"
+    get-stdin "^6.0.0"
     is-ci "^1.1.0"
     pkg-dir "^2.0.0"
-    pupa "^1.0.0"
     read-pkg "^3.0.0"
-    run-node "^0.2.0"
-    slash "^1.0.0"
+    run-node "^1.0.0"
+    slash "^2.0.0"
 
 iconv-lite@0.4.19, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   version "0.4.19"
@@ -7334,9 +7335,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "http://registry.npm.taobao.org/preserve/download/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.9.2:
-  version "1.9.2"
-  resolved "http://registry.npm.taobao.org/prettier/download/prettier-1.9.2.tgz#96bc2132f7a32338e6078aeb29727178c6335827"
+prettier@^1.13.6:
+  version "1.13.6"
+  resolved "http://r.cnpmjs.org/prettier/download/prettier-1.13.6.tgz#00ae0b777ad92f81a9e7a1df2f0470b6dab0cb44"
 
 pretty-error@^2.0.2:
   version "2.1.1"
@@ -7479,10 +7480,6 @@ punycode@^1.2.4, punycode@^1.4.1:
 punycode@^2.1.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/punycode/download/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
-
-pupa@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/pupa/download/pupa-1.0.0.tgz#9a9568a5af7e657b8462a6e9d5328743560ceff6"
 
 q@^1.1.2, q@^1.4.1:
   version "1.5.1"
@@ -8102,9 +8099,9 @@ run-async@^2.2.0:
   dependencies:
     is-promise "^2.1.0"
 
-run-node@^0.2.0:
-  version "0.2.0"
-  resolved "http://registry.npm.taobao.org/run-node/download/run-node-0.2.0.tgz#b26e942e94205dedbe532cddf0fd1dbd56649af6"
+run-node@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.cnpmjs.org/run-node/download/run-node-1.0.0.tgz#46b50b946a2aa2d4947ae1d886e9856fd9cabe5e"
 
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
@@ -8320,6 +8317,10 @@ simple-swizzle@^0.2.2:
 slash@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/slash/download/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
+
+slash@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.cnpmjs.org/slash/download/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
 
 slice-ansi@0.0.4:
   version "0.0.4"
