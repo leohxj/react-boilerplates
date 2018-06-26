@@ -1,0 +1,55 @@
+@import '~antd/dist/antd.less';
+@import './variables.less';
+
+@font-face {
+  font-family: 'xf-icon'; /* project id 534108 */
+  src: url('//at.alicdn.com/t/font_534108_n165ykjf2tv2huxr.eot');
+  src: url('//at.alicdn.com/t/font_534108_n165ykjf2tv2huxr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_534108_n165ykjf2tv2huxr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_534108_n165ykjf2tv2huxr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_534108_n165ykjf2tv2huxr.svg#xf-icon') format('svg');
+}
+
+:global {
+  html,
+  body,
+  #mount-point {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .ant-dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .anticon-notification-assign {
+    &:before {
+      font-family: xf-icon !important;
+      content: '\E6B0';
+    }
+  }
+
+  .anticon-notification-at {
+    &:before {
+      font-family: xf-icon !important;
+      content: '\E660';
+    }
+  }
+
+  .anticon-operation-edit {
+    &:before {
+      font-family: xf-icon !important;
+      content: '\E609';
+    }
+  }
+
+  .anticon-operation-transfer {
+    &:before {
+      font-family: xf-icon !important;
+      content: '\E638';
+    }
+  }
+}
