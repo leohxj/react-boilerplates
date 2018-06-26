@@ -4,7 +4,7 @@
   "description": "A bootstrap for webpack3 project",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config scripts/webpack.config.dev.babel.js --hot --progress",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config scripts/webpack.config.dev.babel.js --hot",
     "build": "cross-env NODE_ENV=production webpack --config scripts/webpack.config.prod.babel.js --display-modules",
     "test": "npm run flow && jest",
     "flow": "flow check",
@@ -74,7 +74,7 @@
     "flow-bin": "^0.75.0",
     "flow-typed": "^2.4.0",
     "flow-webpack-plugin": "^1.2.0",
-    "friendly-errors-webpack-plugin": "^1.6.1",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.0.0-rc.9",
     "jest": "^22.0.4",
