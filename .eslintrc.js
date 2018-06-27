@@ -1,12 +1,10 @@
 module.exports = {
   extends: [
     '@leohxj/eslint-config-dawn-react',
-    'plugin:flowtype/recommended',
     "plugin:prettier/recommended",
-    'prettier/flowtype',
     'prettier/react'
   ],
-  plugins: ['flowtype'],
+  plugins: [],
   env: {
     browser: true,
     node: true,

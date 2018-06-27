@@ -6,13 +6,12 @@
  *
  * Created Date: Tue, 2018-06-26 15:43:25
  *
- * Last Modified: Wed, 2018-06-27 00:09:04
+ * Last Modified: Wed, 2018-06-27 14:52:12
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 
 import StylelintPlugin from 'stylelint-webpack-plugin';
-import FlowWebpackPlugin from 'flow-webpack-plugin';
 
 import { resolve } from './utils';
 
@@ -52,8 +51,7 @@ export default {
   plugins: [
     new StylelintPlugin({
       files: ['**/*.?(l|p)css']
-    }),
-    new FlowWebpackPlugin()
+    })
   ],
   optimization: {
     splitChunks: {

@@ -1,20 +1,17 @@
-/* @flow */
 import classNames from 'classnames';
 import React, { PureComponent } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-type Props = {
-  date: string
-};
+export default class Clock extends PureComponent {
+  static propTypes = {
+    date: PropTypes.string
+  };
 
-type State = {
-  date: string
-};
+  static defaultProps = {
+    date: ''
+  };
 
-export default class Clock extends PureComponent<Props, State> {
-  timer: number;
-
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
 
     const { date } = this.props;
@@ -29,7 +26,7 @@ export default class Clock extends PureComponent<Props, State> {
   }
 
   componentWillUnmount() {
-    window.clearInterval((this.timer: number));
+    window.clearInterval(this.timer);
   }
 
   tick() {

@@ -1,17 +1,10 @@
 {
   "presets": ["env", "stage-2", "react"],
-  "plugins": [
-    "react-hot-loader/babel",
-    "transform-decorators-legacy",
-    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
-  ],
+  "plugins": ["react-hot-loader/babel", "transform-decorators-legacy"],
   "env": {
     "production": {
       "presets": [["env", { "modules": false, "useBuiltIns": true }], "stage-2", "react"],
-      "plugins": [
-        "transform-decorators-legacy",
-        ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
-      ]
+      "plugins": ["transform-decorators-legacy"]
     },
     "test": {
       "presets": [["env"], "stage-2", "react"]

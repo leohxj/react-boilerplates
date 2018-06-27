@@ -1,12 +1,9 @@
-/* @flow */
 import classNames from 'classnames';
 import React, { PureComponent } from 'react';
 
 import Clock from '../../components/Clock';
 
-type Props = {};
-
-export default class ClockPage extends PureComponent<Props> {
+export default class ClockPage extends PureComponent {
   handleRename = () => {};
 
   handleAsyncPlus = () => {};

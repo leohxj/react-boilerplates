@@ -6,16 +6,15 @@
  *
  * Created Date: Fri, 2018-01-12 16:54:48
  *
- * Last Modified: Tue, 2018-06-26 17:12:20
+ * Last Modified: Wed, 2018-06-27 14:53:48
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
- * @flow
  */
 
 import React, { PureComponent } from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default class Header extends PureComponent<{}> {
+export default class Header extends PureComponent {
   render() {
     return (
       <div>

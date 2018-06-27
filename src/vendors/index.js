@@ -1,4 +1,3 @@
-/* @flow */
 import 'babel-polyfill';
 import 'classnames';
 import 'react';

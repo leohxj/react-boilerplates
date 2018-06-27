@@ -6,10 +6,9 @@
  *
  * Created Date: Tue, 2018-01-09 17:12:51
  *
- * Last Modified: Wed, 2018-06-27 00:10:26
+ * Last Modified: Wed, 2018-06-27 14:52:32
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
- * @flow
  */
 
 import * as React from 'react';
@@ -22,7 +21,7 @@ import './styles/index.pcss';
 const MOUNT_NODE = document.getElementById('root');
 
 const render = () => {
-  ReactDOM.render(<Layout />, (MOUNT_NODE: any));
+  ReactDOM.render(<Layout />, MOUNT_NODE);
 };
 
 render();

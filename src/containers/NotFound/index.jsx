@@ -1,21 +1,17 @@
-/* @flow */
 import classNames from 'classnames';
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-type Props = {
-  name: string
-};
+export default class NotFound extends PureComponent {
+  static propTypes = {
+    name: PropTypes.string
+  };
 
-type State = {
-  name: string
-};
-
-export default class NotFound extends PureComponent<Props, State> {
   static defaultProps = {
     name: '404 not found :)'
   };
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
 
     const { name } = this.props;
