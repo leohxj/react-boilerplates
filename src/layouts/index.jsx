@@ -9,25 +9,27 @@
 
  * Created Date: Fri, 2018-01-12 16:43:13
  *
- * Last Modified: Tue, 2018-06-26 17:10:01
+ * Last Modified: Wed, 2018-06-27 23:02:49
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
- * @flow
  */
 
 import React, { PureComponent } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
+import cn from 'classnames';
 
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 
-class Layouts extends PureComponent<{}> {
+import styles from './index.pcss';
+
+class Layouts extends PureComponent {
   render() {
     return (
       <Router>
-        <div className="page-wrapper">
+        <div className={cn(styles.pageWrapper)}>
           <Header />
           <Main />
           <Footer />
