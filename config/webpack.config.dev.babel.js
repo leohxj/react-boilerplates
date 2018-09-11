@@ -1,3 +1,4 @@
+import opn from 'opn';
 import merge from 'webpack-merge';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
@@ -7,6 +8,17 @@ import baseConfig from './webpack.config.base.babel';
 const developmentConfig = merge(baseConfig, {
   mode: 'development',
   devServer: {
+    after() {
+      console.log(`
+Start successfully.
+Now opening app in browser ...
+Your can also visit the url:
+http://localhost:8080/index.html
+`);
+      opn('http://localhost:8080/index.html', {
+        app: 'google chrome'
+      });
+    },
     // Enable history API fallback so HTML5 History API based
     // routing works. Good for complex setups.
     historyApiFallback: true,
