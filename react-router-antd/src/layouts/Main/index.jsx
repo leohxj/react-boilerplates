@@ -4,8 +4,8 @@
  *
  * Created Date: Fri, 2018-01-12 16:59:41
  *
- * Last Modified: Sat, 2018-09-08 17:34:22
- * Last Modified By: 寻镜 <xuejie.hxj@alibaba-inc.com>
+ * Last Modified: Sat, 2018-09-15 10:40:50
+ * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 import React, { PureComponent } from 'react';

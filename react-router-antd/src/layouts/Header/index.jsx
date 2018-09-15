@@ -6,14 +6,15 @@
  *
  * Created Date: Fri, 2018-01-12 16:54:48
  *
- * Last Modified: Sun, 2018-09-09 17:14:26
- * Last Modified By: 寻镜 <xuejie.hxj@alibaba-inc.com>
+ * Last Modified: Sat, 2018-09-15 10:40:34
+ * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 import { Breadcrumb } from 'antd';
 import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 import { getCurrentMenu } from '../../routes';
 
 import styles from './index.less';

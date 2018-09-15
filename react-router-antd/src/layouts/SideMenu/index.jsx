@@ -8,7 +8,7 @@ import { sitemap, getCurrentMenu } from '../../routes';
 
 import styles from './index.less';
 
-import logo from '../../assets/snapshoot.jpg';
+import logo from '../../assets/logo.jpg';
 
 const { Sider } = Layout;
 
@@ -69,7 +69,7 @@ export default class SiderMenu extends PureComponent {
         <div className={styles.logo} id="logo">
           <NavLink to="/">
             <img src={logo} alt="logo" />
-            <h1>Ant Home</h1>
+            <h1>LOGO</h1>
           </NavLink>
         </div>
         <Menu theme="dark" selectedKeys={[currnetMenu.key]} mode="inline">

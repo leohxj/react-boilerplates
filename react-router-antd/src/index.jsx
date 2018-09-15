@@ -6,8 +6,8 @@
  *
  * Created Date: Tue, 2018-01-09 17:12:51
  *
- * Last Modified: Sun, 2018-09-09 16:27:23
- * Last Modified By: 寻镜 <xuejie.hxj@alibaba-inc.com>
+ * Last Modified: Sat, 2018-09-15 10:39:41
+ * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 import * as React from 'react';
@@ -15,7 +15,6 @@ import ReactDOM from 'react-dom';
 
 import './vendors';
 import Layout from './layouts';
-// import { connect } from './api/ws';
 
 import './styles/theme.less';
 
@@ -28,8 +27,7 @@ const render = () => {
 };
 
 render();
-// connect();
 
 if (process.env.NODE_ENV === 'development') {
-  console.warn('AntHome: 正在使用本地开发环境代码!');
+  console.warn('注意: 正在使用本地开发环境代码!');
 }
