@@ -65,6 +65,7 @@
     "@leohxj/eslint-config-dawn-react": "^0.0.3",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^8.0.2",
+    "babel-plugin-import": "^1.8.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.15",
     "clean-webpack-plugin": "^0.1.17",
     "commitizen": "^2.9.6",
