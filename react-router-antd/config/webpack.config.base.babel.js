@@ -6,7 +6,7 @@
  *
  * Created Date: Tue, 2018-06-26 15:43:25
  *
- * Last Modified: Wed, 2018-06-27 14:52:12
+ * Last Modified: Sat, 2018-09-15 10:06:45
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
@@ -45,6 +45,18 @@ export default {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: 'images/[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   },

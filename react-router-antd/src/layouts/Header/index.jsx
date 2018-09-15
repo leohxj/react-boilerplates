@@ -6,7 +6,7 @@
  *
  * Created Date: Fri, 2018-01-12 16:54:48
  *
- * Last Modified: Sat, 2018-09-08 17:47:42
+ * Last Modified: Sun, 2018-09-09 17:14:26
  * Last Modified By: 寻镜 <xuejie.hxj@alibaba-inc.com>
  *
  */
@@ -15,6 +15,8 @@ import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getCurrentMenu } from '../../routes';
+
+import styles from './index.less';
 
 @withRouter
 export default class Header extends PureComponent {
@@ -32,10 +34,12 @@ export default class Header extends PureComponent {
     const currnetMenu = getCurrentMenu(pathname) || {};
 
     return (
-      <Breadcrumb style={{ margin: '16px 0' }}>
-        <Breadcrumb.Item>Admin</Breadcrumb.Item>
-        <Breadcrumb.Item>{currnetMenu.key}</Breadcrumb.Item>
-      </Breadcrumb>
+      <div className={styles.container}>
+        <Breadcrumb>
+          <Breadcrumb.Item>Admin</Breadcrumb.Item>
+          <Breadcrumb.Item>{currnetMenu.key}</Breadcrumb.Item>
+        </Breadcrumb>
+      </div>
     );
   }
 }

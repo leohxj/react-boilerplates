@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react';
 
+import styles from './index.less';
+
 export default class Footer extends PureComponent {
   render() {
     return (
-      <div>
-        <footer>footer</footer>
+      <div className={styles.container}>
+        <footer>Ant Home Footer</footer>
       </div>
     );
   }
