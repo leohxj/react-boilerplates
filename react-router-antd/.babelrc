@@ -1,26 +1,86 @@
 {
-  "presets": ["env", "stage-2", "react"],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
     "react-hot-loader/babel",
-    "transform-decorators-legacy",
-    ["import", { "libraryName": "antd", "style": true }]
+    [
+      "@babel/plugin-syntax-dynamic-import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-syntax-import-meta",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-json-strings",
+    "@babel/plugin-proposal-function-sent",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-numeric-separator",
+    "@babel/plugin-proposal-throw-expressions"
   ],
   "env": {
     "production": {
-      "presets": [["env", { "modules": false, "useBuiltIns": true }], "stage-2", "react"],
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "useBuiltIns": "entry"
+          }
+        ],
+        "@babel/preset-react"
+      ],
       "plugins": [
-        "transform-decorators-legacy",
-        ["import", { "libraryName": "antd", "style": true }],
         [
           "transform-react-remove-prop-types",
           {
             "removeImport": true
           }
-        ]
+        ],
+        [
+          "@babel/plugin-syntax-dynamic-import",
+          {
+            "libraryName": "antd",
+            "style": true
+          }
+        ],
+        [
+          "@babel/plugin-proposal-decorators",
+          {
+            "legacy": true
+          }
+        ],
+        "@babel/plugin-syntax-import-meta",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-json-strings",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-numeric-separator",
+        "@babel/plugin-proposal-throw-expressions"
       ]
     },
     "test": {
-      "presets": [["env"], "stage-2", "react"]
+      "presets": ["@babel/preset-env", "@babel/preset-react"],
+      "plugins": [
+        [
+          "@babel/plugin-proposal-decorators",
+          {
+            "legacy": true
+          }
+        ],
+        "@babel/plugin-syntax-import-meta",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-json-strings",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-numeric-separator",
+        "@babel/plugin-proposal-throw-expressions"
+      ]
     }
   }
 }

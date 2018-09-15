@@ -6,7 +6,7 @@
  *
  * Created Date: Tue, 2018-01-09 17:12:51
  *
- * Last Modified: Sat, 2018-09-15 12:39:16
+ * Last Modified: Sat, 2018-09-15 13:10:58
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
@@ -24,6 +24,7 @@ const MOUNT_NODE = document.getElementById(MOUNT_POINT_ID);
 const render = () => {
   ReactDOM.render(<Layout />, MOUNT_NODE);
 };
+
 async function x() {
   console.log('x');
 }

@@ -6,16 +6,15 @@
  *
  * Created Date: Tue, 2018-06-26 15:43:25
  *
- * Last Modified: Sat, 2018-09-15 12:38:19
+ * Last Modified: Sat, 2018-09-15 13:09:57
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 
-import StylelintPlugin from 'stylelint-webpack-plugin';
+const StylelintPlugin = require('stylelint-webpack-plugin');
+const { resolve } = require('./utils');
 
-import { resolve } from './utils';
-
-export default {
+module.exports = {
   entry: {
     bundle: [resolve('src/vendors'), resolve('src')] // same as resolve('src/index.js');
   },

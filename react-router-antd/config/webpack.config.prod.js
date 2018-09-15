@@ -1,12 +1,12 @@
-import merge from 'webpack-merge';
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import CleanWebpackPlugin from 'clean-webpack-plugin';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+const merge = require('webpack-merge');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-import { resolve } from './utils';
-import baseConfig from './webpack.config.base.babel';
+const { resolve } = require('./utils');
+const baseConfig = require('./webpack.config.base');
 
 const productionConfig = merge(baseConfig, {
   devtool: 'hidden-source-map',
@@ -82,4 +82,4 @@ const productionConfig = merge(baseConfig, {
   ]
 });
 
-export default productionConfig;
+module.exports = productionConfig;

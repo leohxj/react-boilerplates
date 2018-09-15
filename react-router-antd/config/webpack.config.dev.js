@@ -1,9 +1,8 @@
-import opn from 'opn';
-import merge from 'webpack-merge';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
-
-import baseConfig from './webpack.config.base.babel';
+const opn = require('opn');
+const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const baseConfig = require('./webpack.config.base');
 
 const developmentConfig = merge(baseConfig, {
   mode: 'development',
@@ -97,4 +96,4 @@ http://localhost:8080/index.html
   ]
 });
 
-export default developmentConfig;
+module.exports = developmentConfig;
