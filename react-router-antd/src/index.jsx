@@ -6,14 +6,13 @@
  *
  * Created Date: Tue, 2018-01-09 17:12:51
  *
- * Last Modified: Sat, 2018-09-15 10:39:41
+ * Last Modified: Sat, 2018-09-15 12:39:16
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-import './vendors';
 import Layout from './layouts';
 
 import './styles/theme.less';
@@ -25,7 +24,9 @@ const MOUNT_NODE = document.getElementById(MOUNT_POINT_ID);
 const render = () => {
   ReactDOM.render(<Layout />, MOUNT_NODE);
 };
-
+async function x() {
+  console.log('x');
+}
 render();
 
 if (process.env.NODE_ENV === 'development') {

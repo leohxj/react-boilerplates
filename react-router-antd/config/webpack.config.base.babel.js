@@ -6,7 +6,7 @@
  *
  * Created Date: Tue, 2018-06-26 15:43:25
  *
- * Last Modified: Sat, 2018-09-15 10:06:45
+ * Last Modified: Sat, 2018-09-15 12:38:19
  * Last Modified By: Leo Hui <leohxj@gmail.com>
  *
  */
@@ -17,8 +17,7 @@ import { resolve } from './utils';
 
 export default {
   entry: {
-    vendor: resolve('src/vendors'),
-    bundle: resolve('src') // same as resolve('src/index.js');
+    bundle: [resolve('src/vendors'), resolve('src')] // same as resolve('src/index.js');
   },
   output: {
     filename: '[name].js',
