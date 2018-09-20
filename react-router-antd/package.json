@@ -16,14 +16,14 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx, less, pcss}": [
+    "**/*.{js,jsx,less,pcss}": [
       "prettier --write"
     ],
     "**/*.{js,jsx}": [
       "eslint --fix",
       "git add"
     ],
-    "**/*.*.{less, pcss}": [
+    "**/*.*.{less,pcss}": [
       "stylelint --fix",
       "git add"
     ]
