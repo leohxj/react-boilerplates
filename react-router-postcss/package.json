@@ -23,7 +23,7 @@
       "eslint --fix",
       "git add"
     ],
-    "**/*.*.{less,pcss}": [
+    "**/*.{less,pcss}": [
       "stylelint --fix",
       "git add"
     ]
