@@ -5,12 +5,7 @@
     "stylelint-config-prettier"
   ],
   "rules": {
-    "rule-empty-line-before": [
-      "always",
-      {
-        "severity": "warning"
-      }
-    ],
+    "rule-empty-line-before": null,
     "font-family-no-missing-generic-family-keyword": null,
     "declaration-empty-line-before": null,
     "no-descending-specificity": null,

@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 
 import Hello from '../../components/Hello';
 
-export default class HomePage extends PureComponent<{}> {
+export default class HomePage extends PureComponent {
   handleRename = () => {};
 
   handleAsyncPlus = () => {};

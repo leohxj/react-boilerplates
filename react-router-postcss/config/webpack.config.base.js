@@ -1,21 +1,9 @@
-/**
- * @file base 配置
- * @description 详细说明
- *
- * @author Leo Hui <leohxj@gmail.com>
- *
- * Created Date: Tue, 2018-06-26 15:43:25
- *
- * Last Modified: Wed, 2018-06-27 14:52:12
- * Last Modified By: Leo Hui <leohxj@gmail.com>
- *
- */
+'use strict';
 
-import StylelintPlugin from 'stylelint-webpack-plugin';
+const StylelintPlugin = require('stylelint-webpack-plugin');
+const { resolve } = require('./utils');
 
-import { resolve } from './utils';
-
-export default {
+module.exports = {
   entry: {
     vendor: resolve('src/vendors'),
     bundle: resolve('src') // same as resolve('src/index.js');

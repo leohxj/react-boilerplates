@@ -1,6 +1,10 @@
-import path from 'path';
+'use strict';
+
+const path = require('path');
 
 // 拼接目录路径
-export function resolve(dir) {
-  return path.join(__dirname, '..', dir);
-}
+module.exports = {
+  resolve(dir) {
+    return path.join(__dirname, '..', dir);
+  }
+};

@@ -22,14 +22,6 @@ export default class Hello extends PureComponent {
     };
   }
 
-  // 如果组件有对 props => state 的操作, 应该加上这个声明周期
-  componentWillReceiveProps = (nextProps) => {
-    this.setState((prevState, props) => ({
-      ...prevState,
-      ...props
-    }));
-  };
-
   render() {
     const { name } = this.state;
 
