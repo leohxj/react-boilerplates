@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    '@leohxj/eslint-config-dawn-react',
-    "plugin:prettier/recommended",
-    'prettier/react'
-  ],
+  extends: ['@leohxj/eslint-config-dawn-react', 'plugin:prettier/recommended', 'prettier/react'],
   plugins: [],
   env: {
     browser: true,
@@ -13,6 +9,11 @@ module.exports = {
     jest: true
   },
   parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {
+      legacyDecotators: true
+    }
+  },
   rules: {
     'class-methods-use-this': 'off',
     'comma-dangle': 'off',
