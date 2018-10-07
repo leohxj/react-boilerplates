@@ -13,6 +13,11 @@ module.exports = {
     jest: true
   },
   parser: 'babel-eslint',
+  parserOptions: {
+    "ecmaFeatures": {
+      "legacyDecotators": true
+    }
+  },
   rules: {
     'class-methods-use-this': 'off',
     'comma-dangle': 'off',
