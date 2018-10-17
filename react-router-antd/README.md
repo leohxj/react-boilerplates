@@ -1,2 +1,2 @@
-# ant-home
-基于 ant-design, react-route, mobx.
+# react-router-antd
+基于 ant-design, react-route.
