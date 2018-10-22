@@ -11,7 +11,7 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
-      legacyDecotators: true
+      legacyDecorators: true
     }
   },
   rules: {
