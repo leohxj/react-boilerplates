@@ -6,3 +6,8 @@ react + router 算是 React 应用必备的技术栈了。PostCSS 解决的是�
 
 ## react-router-antd
 结合 AntD， 样式采取 less 编写。
+
+
+## react-router-antd-redux
+比较常见的大型应用架构。使用 redux 作为数据状态管理。
+
