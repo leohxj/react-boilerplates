@@ -1,5 +1,5 @@
 // 初始化数据的接口管理
-export async function syncPlus() {
+export async function syncPlus(data) {
   // 一般这里还有有真正和接口交互的代码, 比如
   // const res = await request('player.play', {
   //   request: JSON.stringify(parameters)
@@ -8,7 +8,7 @@ export async function syncPlus() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
-        value: 50
+        ...data
       });
     }, 1000);
   });
