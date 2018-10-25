@@ -6,8 +6,8 @@
  *
  * Created Date: Tue, 2018-01-09 17:12:51
  *
- * Last Modified: Sat, 2018-09-15 13:10:58
- * Last Modified By: Leo Hui <leohxj@gmail.com>
+ * Last Modified: Thu, 2018-10-25 21:09:17
+ * Last Modified By: 寻镜 <xuejie.hxj@alibaba-inc.com>
  *
  */
 import * as React from 'react';
@@ -25,9 +25,6 @@ const render = () => {
   ReactDOM.render(<Layout />, MOUNT_NODE);
 };
 
-async function x() {
-  console.log('x');
-}
 render();
 
 if (process.env.NODE_ENV === 'development') {
